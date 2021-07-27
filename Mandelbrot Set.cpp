@@ -4,11 +4,14 @@
 using namespace std;
 
 /*
-Function: z(n+1) = z(n) + c, where z(n+1), z(n) & c are complex numbers of the form "a + ib" & i=sqrt(-1)
-Working: Plotting the color of each pixel in graph based upon the value of n at until which the function remains bounded in the range of [-2, 2]
-         for each value in the domain of c. Domain of c depends upon the multiplication factor, i.e. how much the graph is zoomed-in or zoomed-out
-         at the point of visualizing the graph. Initial values of c_real lie in the range of [-200, 200] & c_img lie in the range of [-120, 120].
+Function: z(n+1) = z(n)*z(n) + c, where z(n+1), z(n) & c are complex numbers of the form "a + ib" & i=sqrt(-1)
+
+Working: Plotting the color of each pixel in graph based upon the value of n until which the function remains bounded in the range of [-2, 2]
+         for each value in the domain of c. Domain of c depends upon the scaling factor or multiplication factor, i.e. how much the graph is zoomed-in or zoomed-out
+         at the time when it is visualized. Initial values of c_real lie in the range of [-200, 200] & c_img lie in the range of [-120, 120].
          Real part of complex number is mapped with x-axis and imaginary part of the number is mapped with y-axis of the graph.
+
+         To conclude, the number of iterations for z(n) to reach a modulus greater than 2 has been used to determine the color of the pixel. This pixel is the position of point c on complex plane.
 */
 
 class mandelbrot
